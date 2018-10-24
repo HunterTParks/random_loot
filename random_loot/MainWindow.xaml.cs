@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SQLite;
 
 namespace random_loot
 {
@@ -23,6 +24,29 @@ namespace random_loot
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        void DbConnection(object sender, RoutedEventArgs e)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Tools\Databases\loot.db;"))
+            {
+                conn.Open();
+
+                SQLiteCommand command = new SQLiteCommand("SELECT * FROM LOOT_TABLE;", conn);
+                using (SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command))
+                {
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+                    dataAdapter.Fill(dataTable);
+                    Grid.ItemsSource = dataTable.DefaultView;
+                }
+              
+                conn.Close();
+            }
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

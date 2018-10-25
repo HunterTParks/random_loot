@@ -21,13 +21,13 @@ namespace random_loot
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(string[] rarityArray)
+        public MainWindow(List<string> rarityArray)
         {
             InitializeComponent();
             DbConnection(rarityArray);
         }
 
-        void DbConnection(string[] rarityArray)
+        void DbConnection(List<string> rarityArray)
         {
             using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Tools\Databases\loot.db;"))
             {

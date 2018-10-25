@@ -74,7 +74,7 @@ namespace random_loot
                 {
                     System.Data.DataTable dataTable = new System.Data.DataTable();
                     dataAdapter.Fill(dataTable);
-                    Grid.ItemsSource = dataTable.DefaultView;
+                    RandomSource.ItemsSource = dataTable.DefaultView;
                 }
 
                 conn.Close();

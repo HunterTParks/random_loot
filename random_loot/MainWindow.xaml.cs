@@ -43,10 +43,5 @@ namespace random_loot
                 conn.Close();
             }
         }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

@@ -8,6 +8,7 @@
         Title="SelectionWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Go" Click="Window_Event" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
+        <RadioButton Content="Rare" HorizontalAlignment="Left" Margin="365,181,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

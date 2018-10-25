@@ -24,9 +24,10 @@ namespace random_loot
         public MainWindow(string[] rarityArray)
         {
             InitializeComponent();
+            DbConnection(rarityArray);
         }
 
-        void DbConnection(object sender, RoutedEventArgs e)
+        void DbConnection(string[] rarityArray)
         {
             using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Tools\Databases\loot.db;"))
             {

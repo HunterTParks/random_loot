@@ -14,7 +14,7 @@
         <CheckBox Name="Rare" Content="Rare" HorizontalAlignment="Left" Margin="352,162,0,0" VerticalAlignment="Top"/>
         <CheckBox Name="Legendary" Content="Legendary" HorizontalAlignment="Left" Margin="352,177,0,0" VerticalAlignment="Top"/>
         <CheckBox Name="Misc" Content="Misc." HorizontalAlignment="Left" Margin="352,192,0,0" VerticalAlignment="Top"/>
-        <Button Content="Randomize" HorizontalAlignment="Left" Margin="221,229,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Randomize" Click="ViewRandomItemEvent" HorizontalAlignment="Left" Margin="221,229,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Go" Click="ViewListEvent" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

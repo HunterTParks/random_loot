@@ -32,6 +32,11 @@ namespace random_loot
             window2.Show();
         }
 
+        public void ViewRandomItemEvent(object sender, RoutedEventArgs e)
+        {
+            rarityArray = SetRarityArray(rarityArray);
+        }
+
         public List<string> SetRarityArray(List<string> rarityArray)
         {
             rarityArray[0] = Mundane.IsChecked == true ? "Mundane" : null;

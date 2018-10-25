@@ -35,6 +35,7 @@ namespace random_loot
         public void ViewRandomItemEvent(object sender, RoutedEventArgs e)
         {
             rarityArray = SetRarityArray(rarityArray);
+            RandomItemWindow window = new RandomItemWindow(rarityArray);
         }
 
         public List<string> SetRarityArray(List<string> rarityArray)

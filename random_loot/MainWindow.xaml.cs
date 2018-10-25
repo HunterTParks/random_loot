@@ -64,6 +64,10 @@ namespace random_loot
                  */
                 query += ";";
 
+                /*
+                 * Opens connection to local Database and posts data to datagrid
+                 * 
+                 */
                 conn.Open();
 
                 SQLiteCommand command = new SQLiteCommand(query, conn);

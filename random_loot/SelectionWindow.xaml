@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="SelectionWindow" Height="450" Width="800">
     <Grid Margin="-1,0,1,0">
-        <Button Content="Go" Click="Window_Event" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
         <Border BorderBrush="Black" BorderThickness="2" Margin="343,108,337,195" />
         <CheckBox Name="Mundane" Content="Mundane" HorizontalAlignment="Left" Margin="352,117,0,0" VerticalAlignment="Top"/>
         <CheckBox Name="Common" Content="Common" HorizontalAlignment="Left" Margin="352,132,0,0" VerticalAlignment="Top"/>
@@ -16,5 +15,6 @@
         <CheckBox Name="Legendary" Content="Legendary" HorizontalAlignment="Left" Margin="352,177,0,0" VerticalAlignment="Top"/>
         <CheckBox Name="Misc" Content="Misc." HorizontalAlignment="Left" Margin="352,192,0,0" VerticalAlignment="Top"/>
         <Button Content="Randomize" HorizontalAlignment="Left" Margin="221,229,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Go" Click="ViewListEvent" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

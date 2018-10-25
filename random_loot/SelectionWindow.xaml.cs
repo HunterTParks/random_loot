@@ -25,7 +25,7 @@ namespace random_loot
             InitializeComponent();
         }
 
-        public void Window_Event(object sender, RoutedEventArgs e)
+        public void ViewListEvent(object sender, RoutedEventArgs e)
         {
             rarityArray = SetRarityArray(rarityArray);
             MainWindow window2 = new MainWindow(rarityArray, this);

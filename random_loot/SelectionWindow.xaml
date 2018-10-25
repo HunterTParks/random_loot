@@ -8,7 +8,7 @@
         Title="SelectionWindow" Height="450" Width="800">
     <Grid Margin="-1,0,1,0">
         <Button Content="Go" Click="Window_Event" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
-        <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100" Margin="341,112,351,207" />
+        <Border BorderBrush="Black" BorderThickness="2" Margin="343,108,337,195" />
         <CheckBox Name="Mundane" Content="Mundane" HorizontalAlignment="Left" Margin="352,117,0,0" VerticalAlignment="Top"/>
         <CheckBox Name="Common" Content="Common" HorizontalAlignment="Left" Margin="352,132,0,0" VerticalAlignment="Top"/>
         <CheckBox Name="Uncommon" Content="Uncommon" HorizontalAlignment="Left" Margin="352,147,0,0" VerticalAlignment="Top"/>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SelectionWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Go" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Go" Click="Window_Event" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

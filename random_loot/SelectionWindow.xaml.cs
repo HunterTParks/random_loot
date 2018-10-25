@@ -23,5 +23,11 @@ namespace random_loot
         {
             InitializeComponent();
         }
+
+        private void Window_Event(object sender, RoutedEventArgs e)
+        {
+            MainWindow window2 = new MainWindow();
+            window2.Show();
+        }
     }
 }

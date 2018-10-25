@@ -33,7 +33,7 @@ namespace random_loot
             rarityArray[3] = Rare.IsChecked == true ? "Rare" : null;
             rarityArray[4] = Legendary.IsChecked == true ? "Legendary" : null;
             rarityArray[5] = Misc.IsChecked == true ? "Misc" : null;
-            MainWindow window2 = new MainWindow(rarityArray);
+            MainWindow window2 = new MainWindow(rarityArray, this);
             window2.Show();
         }
     }

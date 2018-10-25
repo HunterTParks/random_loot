@@ -21,10 +21,11 @@ namespace random_loot
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(List<string> rarityArray)
+        public MainWindow(List<string> rarityArray, SelectionWindow window)
         {
             InitializeComponent();
             DbConnection(rarityArray);
+            window.Close();
         }
 
         void DbConnection(List<string> rarityArray)

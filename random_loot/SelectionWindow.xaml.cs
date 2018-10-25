@@ -19,14 +19,21 @@ namespace random_loot
     /// </summary>
     public partial class SelectionWindow : Window
     {
+        private string[] rarityArray;
         public SelectionWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Event(object sender, RoutedEventArgs e)
+        public void Window_Event(object sender, RoutedEventArgs e)
         {
-            MainWindow window2 = new MainWindow();
+            rarityArray[0] = Mundane.IsChecked == true ? "Mundane" : "";
+            rarityArray[1] = Common.IsChecked == true ? "Common" : "";
+            rarityArray[2] = Uncommon.IsChecked == true ? "Uncommon" : "";
+            rarityArray[3] = Rare.IsChecked == true ? "Rare" : "";
+            rarityArray[4] = Legendary.IsChecked == true ? "Legendary" : "";
+            rarityArray[5] = Misc.IsChecked == true ? "Misc" : "";
+            MainWindow window2 = new MainWindow(rarityArray);
             window2.Show();
         }
     }

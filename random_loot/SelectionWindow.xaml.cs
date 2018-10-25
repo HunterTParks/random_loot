@@ -19,7 +19,7 @@ namespace random_loot
     /// </summary>
     public partial class SelectionWindow : Window
     {
-        private string[] rarityArray;
+        private string[] rarityArray = new string[6];
         public SelectionWindow()
         {
             InitializeComponent();

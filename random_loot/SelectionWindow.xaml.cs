@@ -27,12 +27,12 @@ namespace random_loot
 
         public void Window_Event(object sender, RoutedEventArgs e)
         {
-            rarityArray[0] = Mundane.IsChecked == true ? "Mundane" : "";
-            rarityArray[1] = Common.IsChecked == true ? "Common" : "";
-            rarityArray[2] = Uncommon.IsChecked == true ? "Uncommon" : "";
-            rarityArray[3] = Rare.IsChecked == true ? "Rare" : "";
-            rarityArray[4] = Legendary.IsChecked == true ? "Legendary" : "";
-            rarityArray[5] = Misc.IsChecked == true ? "Misc" : "";
+            rarityArray[0] = Mundane.IsChecked == true ? "Mundane" : null;
+            rarityArray[1] = Common.IsChecked == true ? "Common" : null;
+            rarityArray[2] = Uncommon.IsChecked == true ? "Uncommon" : null;
+            rarityArray[3] = Rare.IsChecked == true ? "Rare" : null;
+            rarityArray[4] = Legendary.IsChecked == true ? "Legendary" : null;
+            rarityArray[5] = Misc.IsChecked == true ? "Misc" : null;
             MainWindow window2 = new MainWindow(rarityArray);
             window2.Show();
         }

@@ -8,12 +8,12 @@
         Title="SelectionWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Go" Click="Window_Event" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" Width="75"/>
-        <RadioButton Content="Legendary" HorizontalAlignment="Left" Margin="365,176,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Rare" HorizontalAlignment="Left" Margin="365,161,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Uncommon" HorizontalAlignment="Left" Margin="365,146,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Common" HorizontalAlignment="Left" Margin="365,131,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Misc." HorizontalAlignment="Left" Margin="365,191,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <RadioButton Content="Mundane" HorizontalAlignment="Left" Margin="365,116,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Mundane" Content="Mundane" HorizontalAlignment="Left" Margin="365,116,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Common" Content="Common" HorizontalAlignment="Left" Margin="365,131,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Uncommon" Content="Uncommon" HorizontalAlignment="Left" Margin="365,146,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Rare" Content="Rare" HorizontalAlignment="Left" Margin="365,161,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Legendary" Content="Legendary" HorizontalAlignment="Left" Margin="365,176,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Misc" Content="Misc." HorizontalAlignment="Left" Margin="365,191,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

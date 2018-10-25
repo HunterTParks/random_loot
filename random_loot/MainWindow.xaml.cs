@@ -31,9 +31,42 @@ namespace random_loot
         {
             using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Tools\Databases\loot.db;"))
             {
+                string query = "SELECT * FROM loot_table WHERE ";
+                bool beginningOfQuery = true;
+
+                /*
+                 * Remove all null values from array
+                 * 
+                 */
+                for (int i = 0; i <= rarityArray.Count - 1; i++)
+                {
+                    if (rarityArray[i] == null)
+                        rarityArray.RemoveAt(i);
+                }
+
+                /*
+                 * Add Rarity values to SQL Query
+                 *
+                 */
+                for (int i = 0; i <= rarityArray.Count - 1; i++)
+                {
+                    if (i == 0 && beginningOfQuery)
+                        query += "Rarity = '" + rarityArray[i] + "'";
+                    else
+                    {
+                        query += " OR Rarity = '" + rarityArray[i] + "'";
+                    }
+                }
+
+                /*
+                 * Add semi-colon to end of query to keep SQL syntax
+                 * 
+                 */
+                query += ";";
+
                 conn.Open();
 
-                SQLiteCommand command = new SQLiteCommand("SELECT * FROM LOOT_TABLE;", conn);
+                SQLiteCommand command = new SQLiteCommand(query, conn);
                 using (SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command))
                 {
                     System.Data.DataTable dataTable = new System.Data.DataTable();

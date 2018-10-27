@@ -23,7 +23,8 @@ namespace random_loot
         public RandomItemWindow(List<string> rarityArray)
         {
             InitializeComponent();
-            
+            List<string> array = DbConnection(rarityArray);
+            int num = RandomNumberGenerator();
         }
 
         void DbConnection(List<string> rarityArray)
@@ -70,16 +71,16 @@ namespace random_loot
                 conn.Open();
 
                 SQLiteCommand command = new SQLiteCommand(query, conn);
-                using (SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command))
-                {
-                    System.Data.DataTable dataTable = new System.Data.DataTable();
-                    dataAdapter.Fill(dataTable);
-                    RandomSource.ItemsSource = dataTable.DefaultView;
-                }
+                
 
                 conn.Close();
             }
         }
 
+        public int RandomNumberGenerator()
+        {
+            Random rand = new Random();
+            return 0;
+        }
     }
 }

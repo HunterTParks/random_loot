@@ -27,6 +27,11 @@ namespace random_loot
             DbConnection(rarityArray);
         }
 
+        /*
+         * This function opens a connection to a local database and gets a random
+         * item using the user's input
+         * 
+         */
         void DbConnection(List<string> rarityArray)
         {
             List<Item> list = new List<Item>();
@@ -71,6 +76,11 @@ namespace random_loot
                  */
                 conn.Open();
 
+                /*
+                 * This section reads the table in the database and posts the information
+                 * to the datagrid.
+                 * 
+                 */
                 SQLiteCommand command = new SQLiteCommand(query, conn);
                 using (SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command))
                 {

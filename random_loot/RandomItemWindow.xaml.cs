@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SQLite;
+using System.Collections.ObjectModel;
 
 namespace random_loot
 {
@@ -23,12 +24,12 @@ namespace random_loot
         public RandomItemWindow(List<string> rarityArray)
         {
             InitializeComponent();
-            List<string> array = DbConnection(rarityArray);
-            int num = RandomNumberGenerator();
+            DbConnection(rarityArray);
         }
 
         void DbConnection(List<string> rarityArray)
         {
+            List<Item> list = new List<Item>();
             using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Tools\Databases\loot.db;"))
             {
                 string query = "SELECT * FROM loot_table WHERE ";
@@ -62,7 +63,7 @@ namespace random_loot
                  * Add semi-colon to end of query to keep SQL syntax
                  * 
                  */
-                query += ";";
+                query += " ORDER BY RANDOM() LIMIT 1;";
 
                 /*
                  * Opens connection to local Database and posts data to datagrid
@@ -71,16 +72,15 @@ namespace random_loot
                 conn.Open();
 
                 SQLiteCommand command = new SQLiteCommand(query, conn);
-                
+                using (SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command))
+                {
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+                    dataAdapter.Fill(dataTable);
+                    RandomSource.ItemsSource = dataTable.DefaultView;
+                }
 
                 conn.Close();
             }
-        }
-
-        public int RandomNumberGenerator()
-        {
-            Random rand = new Random();
-            return 0;
         }
     }
 }

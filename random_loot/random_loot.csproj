@@ -73,6 +73,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Item.cs" />
     <Compile Include="RandomItemWindow.xaml.cs">
       <DependentUpon>RandomItemWindow.xaml</DependentUpon>
     </Compile>
